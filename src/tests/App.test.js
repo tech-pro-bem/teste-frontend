@@ -34,7 +34,13 @@ describe('Testando componente `App`', () => {
 
 	it('Validando se a página <App /> renderiza o componente <Cats />', () => {
 		render(<App />);
-		const headerTitle = screen.getByRole('button');
-		expect(headerTitle).toHaveTextContent(/Gerar Gatinhos/i);
+		const button = screen.getAllByRole('button');
+		expect(button[0]).toHaveTextContent(/Gerar Gatinhos/i);
+	});
+
+	it('Validando se a página <App /> renderiza o componente <Dogs />', () => {
+		render(<App />);
+		const button = screen.getAllByRole('button');
+		expect(button[1]).toHaveTextContent(/Gerar Doguinhos/i);
 	});
 });
