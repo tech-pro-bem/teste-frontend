@@ -2,9 +2,9 @@ import React from 'react';
 
 function App() {
   return (
-    <div>
-      Iniciando.
-    </div>
+    <header>
+      <h1>Doguinhos e Gatinhos</h1>
+    </header>
   );
 }
 
