@@ -43,4 +43,5 @@ describe('Testando componente `App`', () => {
 		const button = screen.getAllByRole('button');
 		expect(button[1]).toHaveTextContent(/Gerar Doguinhos/i);
 	});
+	
 });

@@ -8,10 +8,16 @@ describe('Testando componente `Dogs`', () => {
 		render(<Dogs />);
 	});
 
-  it('Validando se a página <Dogs /> contém uma tag `button`', () => {
+  it('Validando se o componente <Dogs /> contém uma tag `button`', () => {
 		render(<Dogs />);
 		const header = screen.getByRole('button');
 		expect(header).toBeInTheDocument();
+	});
+
+  it('Validando se o componente <Dogs /> renderiza o botão com o texto `Gerar Doguinhos`', () => {
+		render(<Dogs />);
+		const button = screen.getByRole('button');
+		expect(button).toHaveTextContent(/Gerar Doguinhos/i);
 	});
 
 });
