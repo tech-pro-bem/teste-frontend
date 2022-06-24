@@ -25,4 +25,10 @@ describe('Testando componente `App`', () => {
 		const headerTitle = screen.getByRole('heading', { level: 1 });
 		expect(headerTitle).toHaveTextContent(/Doguinhos e Gatinhos/i);
 	});
+
+	it('Validando se a página <App /> renderiza o componente <Cats />', () => {
+		render(<App />);
+		const headerTitle = screen.getByRole('button');
+		expect(headerTitle).toHaveTextContent(/Gerar Gatinhos/i);
+	});
 });
