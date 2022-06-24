@@ -13,4 +13,10 @@ describe('Testando componente `App`', () => {
 		const header = screen.getByRole('banner');
 		expect(header).toBeInTheDocument();
 	});
+
+	it('Validando se a página <App /> contém uma tag `h1`', () => {
+		render(<App />);
+		const headerTitle = screen.getByRole('heading', { level: 1 });
+		expect(headerTitle).toBeInTheDocument();
+	});
 });
