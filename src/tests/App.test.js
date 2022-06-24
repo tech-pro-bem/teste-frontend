@@ -26,6 +26,12 @@ describe('Testando componente `App`', () => {
 		expect(headerTitle).toHaveTextContent(/Doguinhos e Gatinhos/i);
 	});
 
+	it('Validando se a página <App /> contém uma tag `main`', () => {
+		render(<App />);
+		const headerTitle = screen.getByRole('main');
+		expect(headerTitle).toBeInTheDocument();
+	});
+
 	it('Validando se a página <App /> renderiza o componente <Cats />', () => {
 		render(<App />);
 		const headerTitle = screen.getByRole('button');
