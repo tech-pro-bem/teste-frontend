@@ -19,4 +19,10 @@ describe('Testando componente `App`', () => {
 		const headerTitle = screen.getByRole('heading', { level: 1 });
 		expect(headerTitle).toBeInTheDocument();
 	});
+
+	it('Validando se a página <App /> contém o texto `Doguinhos e Gatinhos`', () => {
+		render(<App />);
+		const headerTitle = screen.getByRole('heading', { level: 1 });
+		expect(headerTitle).toHaveTextContent(/Doguinhos e Gatinhos/i);
+	});
 });
