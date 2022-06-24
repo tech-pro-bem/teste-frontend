@@ -1,5 +1,6 @@
 import React from 'react';
 import Cats from '../components/Cats';
+import Dogs from '../components/Dogs';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       </header>
       <main>
         <Cats />
+        <Dogs />
       </main>
     </>
   );
