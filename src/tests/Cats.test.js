@@ -20,4 +20,10 @@ describe('Testando componente `Cats`', () => {
 		expect(button).toHaveTextContent(/Gerar Gatinhos/i);
 	});
 
+	it('Validando se o componente <Cats /> contém uma tag `img`', () => {
+		render(<Cats />);
+		const image = screen.getByRole('img');
+		expect(image).toBeInTheDocument();
+	});
+
 });
