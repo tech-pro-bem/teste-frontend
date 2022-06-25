@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Cats() {
+function Animals() {
   return (
     <>
       <img
@@ -16,4 +16,4 @@ function Cats() {
   );
 }
 
-export default Cats;
+export default Animals;

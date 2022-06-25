@@ -1,6 +1,5 @@
 import React from 'react';
-import Cats from '../components/Cats';
-import Dogs from '../components/Dogs';
+import Animals from '../components/Animals';
 
 function App() {
   return (
@@ -9,8 +8,8 @@ function App() {
         <h1>Doguinhos e Gatinhos</h1>
       </header>
       <main>
-        <Cats />
-        <Dogs />
+        <Animals />
+        <Animals />
       </main>
     </>
   );

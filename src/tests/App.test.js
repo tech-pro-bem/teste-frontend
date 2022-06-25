@@ -32,16 +32,10 @@ describe('Testando componente `App`', () => {
 		expect(headerTitle).toBeInTheDocument();
 	});
 
-	it('Validando se a página <App /> renderiza o componente <Cats />', () => {
+	it('Validando se a página <App /> renderiza 2 componentes', () => {
 		render(<App />);
 		const button = screen.getAllByRole('button');
-		expect(button[0]).toHaveTextContent(/Gerar Gatinhos/i);
-	});
-
-	it('Validando se a página <App /> renderiza o componente <Dogs />', () => {
-		render(<App />);
-		const button = screen.getAllByRole('button');
-		expect(button[1]).toHaveTextContent(/Gerar Doguinhos/i);
+		expect(button).toHaveLength(2);
 	});
 	
 });
