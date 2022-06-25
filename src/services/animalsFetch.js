@@ -1,7 +1,8 @@
 import axios from 'axios';
+import makeRandomNumber from './makeRandomNumber';
 
 const catFetch = () => {
-  const cats = axios.get('https://placekitten.com/g/200/500', {
+  const cats = axios.get(`https://placekitten.com/g/${makeRandomNumber()}/${makeRandomNumber()}`, {
     responseType: 'blob',
   })
     .then((response) => {
