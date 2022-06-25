@@ -4,7 +4,15 @@ import { AuthContext } from '../providers/auth';
 
 function Animals(props) {
   const { animal } = props;
-  const { catAndDog, setCatAndDog } = React.useContext(AuthContext);
+  const { catAndDog } = React.useContext(AuthContext);
+
+  const handleClickDog = () => {
+    console.log(catAndDog.dogImage);
+  };
+
+  const handleClickCat = () => {
+    console.log(catAndDog.catImage);
+  };
 
   return (
     <>
@@ -14,7 +22,10 @@ function Animals(props) {
       />
       <button
         type="button"
+        onClick={ animal === 'Gatinhos' ? handleClickCat : handleClickDog }
       >
+        Gerar
+        {' '}
         {animal}
       </button>
     </>

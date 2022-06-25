@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 export const AuthContext = React.createContext({});
@@ -6,10 +6,10 @@ export const AuthContext = React.createContext({});
 export const AuthProvider = (props) => {
   const { children } = props;
   const [catAndDog, setCatAndDog] = useState({
-    cat: 'Gerar Gatinhos',
-    dog: 'Gerar Doguinhos',
-    catImage: '',
-    dogImage: '',
+    cat: 'Gatinhos',
+    dog: 'Doguinhos',
+    catImage: 'teste1',
+    dogImage: 'teste2',
   });
 
   return (
