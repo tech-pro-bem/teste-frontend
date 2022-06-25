@@ -17,7 +17,8 @@ export const HeaderApp = styled.header`
   margin-bottom:15px;
 `;
 
-export const MainApp = styled.main`
+export const DivApp = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom:15px;
 `;
