@@ -27,12 +27,12 @@ function Animals(props) {
   return (
     <>
       <img
-        src={ animal === 'Gatinhos' ? catImage : dogImage }
-        alt={ animal === 'Gatinhos' ? 'Imagem de um gato.' : 'Imagem de um cachorro.' }
+        src={ animal === 'Gatinho' ? catImage : dogImage }
+        alt={ animal === 'Gatinho' ? 'Imagem de um gato.' : 'Imagem de um cachorro.' }
       />
       <button
         type="button"
-        onClick={ animal === 'Gatinhos' ? handleClickCat : handleClickDog }
+        onClick={ animal === 'Gatinho' ? handleClickCat : handleClickDog }
       >
         Gerar
         {' '}

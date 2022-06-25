@@ -7,8 +7,8 @@ export const AuthProvider = (props) => {
   const { children } = props;
 
   const [catAndDog, setCatAndDog] = useState({
-    cat: 'Gatinhos',
-    dog: 'Doguinhos',
+    cat: 'Gatinho',
+    dog: 'Doguinho',
   });
 
   const [dogImage, setDogImage] = useState('');
