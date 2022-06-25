@@ -1,9 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Animals from '../components/Animals';
 import { AuthContext } from '../providers/auth';
+import { catFetch, dogFetch } from '../services/animalsFetch';
 
 function App() {
-  const { catAndDog, loading } = React.useContext(AuthContext);
+  const { catAndDog, loading,
+    setDogImage, setCatImage } = React.useContext(AuthContext);
+
+  useState(() => {
+    const dogInitialImage = () => {
+      dogFetch().then((value) => {
+        setDogImage(value);
+      });
+    };
+
+    const catInitialImage = () => {
+      catFetch().then((value) => {
+        setCatImage(value);
+      });
+    };
+
+    dogInitialImage();
+    catInitialImage();
+  }, []);
 
   return (
     <>
