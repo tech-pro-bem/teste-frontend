@@ -7,8 +7,8 @@ export const AuthProvider = (props) => {
   const { children } = props;
 
   const catAndDog = {
-    cat: 'gato',
-    dog: 'cachorro',
+    cat: 'Gerar Gatinhos',
+    dog: 'Gerar Doguinhos',
   };
 
   return (

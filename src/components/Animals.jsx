@@ -1,6 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-function Animals() {
+function Animals(props) {
+  const { animal } = props;
   return (
     <>
       <img
@@ -10,10 +12,14 @@ function Animals() {
       <button
         type="button"
       >
-        Gerar Gatinhos
+        {animal}
       </button>
     </>
   );
 }
+
+Animals.propTypes = {
+  animal: PropTypes.string.isRequired,
+};
 
 export default Animals;
