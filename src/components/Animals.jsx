@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { AuthContext } from '../providers/auth';
 
 function Animals(props) {
   const { animal } = props;
+  const { catAndDog, setCatAndDog } = React.useContext(AuthContext);
+
   return (
     <>
       <img

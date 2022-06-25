@@ -5,14 +5,15 @@ export const AuthContext = React.createContext({});
 
 export const AuthProvider = (props) => {
   const { children } = props;
-
-  const catAndDog = {
+  const [catAndDog, setCatAndDog] = useState({
     cat: 'Gerar Gatinhos',
     dog: 'Gerar Doguinhos',
-  };
+    catImage: '',
+    dogImage: '',
+  });
 
   return (
-    <AuthContext.Provider value={ { catAndDog } }>
+    <AuthContext.Provider value={ { catAndDog, setCatAndDog } }>
       {children}
     </AuthContext.Provider>
   );
