@@ -3,7 +3,7 @@ import Animals from '../components/Animals';
 import { AuthContext } from '../providers/auth';
 
 function App() {
-  const { catAndDog } = React.useContext(AuthContext);
+  const { catAndDog, loading } = React.useContext(AuthContext);
 
   return (
     <>
@@ -13,6 +13,7 @@ function App() {
       <main>
         <Animals animal={ catAndDog.cat } />
         <Animals animal={ catAndDog.dog } />
+        <p>{loading && 'Loading...'}</p>
       </main>
     </>
   );

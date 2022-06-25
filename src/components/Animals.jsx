@@ -5,14 +5,23 @@ import { catFetch, dogFetch } from '../services/animalsFetch';
 
 function Animals(props) {
   const { animal } = props;
-  const { dogImage, setDogImage, catImage, setCatImage } = React.useContext(AuthContext);
+  const { dogImage, setDogImage, catImage,
+    setCatImage, setLoading } = React.useContext(AuthContext);
 
   const handleClickDog = () => {
-    dogFetch().then((value) => setDogImage(value));
+    setLoading(true);
+    dogFetch().then((value) => {
+      setDogImage(value);
+      setLoading(false);
+    });
   };
 
   const handleClickCat = () => {
-    catFetch().then((value) => setCatImage(value));
+    setLoading(true);
+    catFetch().then((value) => {
+      setCatImage(value);
+      setLoading(false);
+    });
   };
 
   return (

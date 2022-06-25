@@ -13,6 +13,7 @@ export const AuthProvider = (props) => {
 
   const [dogImage, setDogImage] = useState('');
   const [catImage, setCatImage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   return (
     <AuthContext.Provider
@@ -21,7 +22,9 @@ export const AuthProvider = (props) => {
         dogImage,
         setDogImage,
         catImage,
-        setCatImage } }
+        setCatImage,
+        loading,
+        setLoading } }
     >
       {children}
     </AuthContext.Provider>

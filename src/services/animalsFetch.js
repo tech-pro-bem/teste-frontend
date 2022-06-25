@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const catFetch = () => {
-  const cats = axios.get('https://placekitten.com/g/200/300', {
+  const cats = axios.get('https://placekitten.com/g/200/500', {
     responseType: 'blob',
   })
     .then((response) => {
