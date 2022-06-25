@@ -1,34 +1,18 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-import axios from 'axios';
 import { AuthContext } from '../providers/auth';
+import { catFetch, dogFetch } from '../services/animalsFetch';
 
 function Animals(props) {
   const { animal } = props;
-  const { catImage, setCatImage, dogImage, setDogImage } = React.useContext(AuthContext);
-
-  useEffect(() => {
-    if (animal === 'Gatinhos') {
-      axios.get('http://placekitten.com/300/300', { responseType: 'blob' })
-        .then((response) => {
-          const image = URL.createObjectURL(response.data);
-          setCatImage(image);
-        });
-    }
-
-    axios.get('https://cors-anywhere.herokuapp.com/place.dog/300/200', { responseType: 'blob' })
-      .then((response) => {
-        const image = URL.createObjectURL(response.data);
-        setDogImage(image);
-      });
-  }, []);
+  const { dogImage, setDogImage, catImage, setCatImage } = React.useContext(AuthContext);
 
   const handleClickDog = () => {
-    console.log(dogImage);
+    dogFetch().then((value) => setDogImage(value));
   };
 
   const handleClickCat = () => {
-    console.log(catImage);
+    catFetch().then((value) => setCatImage(value));
   };
 
   return (
