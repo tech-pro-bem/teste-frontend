@@ -37,7 +37,7 @@ function App() {
             <Animals animal={ catAndDog.dog } />
           </S.SectionApp>
           <S.SectionApp>
-            <p>{loading && 'Carregando..'}</p>
+            <p>{loading && 'Carregando...'}</p>
           </S.SectionApp>
         </S.MainApp>
       </S.ContainerApp>
