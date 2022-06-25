@@ -1,5 +1,5 @@
 import axios from 'axios';
-import makeRandomNumber from './makeRandomNumber';
+import makeRandomNumber from '../utils/makeRandomNumber';
 
 const catFetch = () => {
   const cats = axios.get(`https://placekitten.com/g/${makeRandomNumber()}/${makeRandomNumber()}`, {
