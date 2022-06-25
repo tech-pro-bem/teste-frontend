@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { AuthContext } from '../providers/auth';
 import { catFetch, dogFetch } from '../services/animalsFetch';
+import * as S from '../styles/Animals';
 
 function Animals(props) {
   const { animal } = props;
@@ -25,20 +26,22 @@ function Animals(props) {
   };
 
   return (
-    <>
-      <img
-        src={ animal === 'Gatinho' ? catImage : dogImage }
-        alt={ animal === 'Gatinho' ? 'Imagem de um gato.' : 'Imagem de um cachorro.' }
-      />
-      <button
+    <S.DivAnimal>
+      <S.DivImage>
+        <S.Image
+          src={ animal === 'Gatinho' ? catImage : dogImage }
+          alt={ animal === 'Gatinho' ? 'Imagem de um gato.' : 'Imagem de um cachorro.' }
+        />
+      </S.DivImage>
+      <S.ButtonAnimal
         type="button"
         onClick={ animal === 'Gatinho' ? handleClickCat : handleClickDog }
       >
         Gerar
         {' '}
         {animal}
-      </button>
-    </>
+      </S.ButtonAnimal>
+    </S.DivAnimal>
   );
 }
 

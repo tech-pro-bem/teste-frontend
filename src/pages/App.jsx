@@ -31,15 +31,15 @@ function App() {
         <S.HeaderApp>
           <h1>Doguinhos e Gatinhos</h1>
         </S.HeaderApp>
-        <main>
-          <S.DivApp>
+        <S.MainApp>
+          <S.SectionApp>
             <Animals animal={ catAndDog.cat } />
             <Animals animal={ catAndDog.dog } />
-          </S.DivApp>
-          <S.DivApp>
+          </S.SectionApp>
+          <S.SectionApp>
             <p>{loading && 'Carregando..'}</p>
-          </S.DivApp>
-        </main>
+          </S.SectionApp>
+        </S.MainApp>
       </S.ContainerApp>
     </S.AllApp>
   );

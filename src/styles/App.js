@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AllApp = styled.div`
+export const AllApp = styled.section`
   height: 100vh;
   display: flex;
   align-items: center;
@@ -13,12 +13,17 @@ export const ContainerApp = styled.div`
 
 export const HeaderApp = styled.header`
   display: flex;
-  justify-content: center;
-  margin-bottom:15px;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
 `;
 
-export const DivApp = styled.div`
+export const SectionApp = styled.section`
   display: flex;
   justify-content: center;
-  margin-bottom:15px;
+  margin-bottom: 15px;
+`;
+
+export const MainApp = styled.main`
+  height: 280px;
 `;
