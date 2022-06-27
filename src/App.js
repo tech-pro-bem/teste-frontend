@@ -1,8 +1,12 @@
+import PetsContainer from "./components/PetsContainer";
+import GlobalStyles from "./styles/global";
+
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+      <PetsContainer />
+      <GlobalStyles />
+    </>
   );
 }
 
