@@ -5,7 +5,7 @@ export function Fetcher({
   render,
   url,
   renderFailure,
-  isdefaultHeaders = false,
+  hasHeaders = false,
 }: any) {
   const [response, setResponse] = React.useState('');
   const [loading, setLoading] = React.useState(false);
@@ -15,7 +15,7 @@ export function Fetcher({
     setLoading(true);
     featchData({
       url,
-      isdefaultHeaders,
+      hasHeaders,
     })
       .then(url => {
         setResponse(url);
@@ -25,7 +25,7 @@ export function Fetcher({
         setError(error.message);
         setLoading(false);
       });
-  }, [url, isdefaultHeaders]);
+  }, [url, hasHeaders]);
 
   React.useEffect(() => {
     fetch();

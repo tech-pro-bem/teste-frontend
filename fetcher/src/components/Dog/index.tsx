@@ -11,7 +11,7 @@ export function Dog() {
           src={url}
           onClick={() => fetch()}
           loading={loading}
-          label="generate dog"
+          label="generate cat"
         />
       )}
       renderFailure={(error: string) => <ErrorMessage message={error} />}

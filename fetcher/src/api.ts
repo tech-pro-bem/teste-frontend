@@ -3,7 +3,7 @@ import axios, { AxiosRequestHeaders } from 'axios';
 type Props = {
   url: string;
   headers?: AxiosRequestHeaders;
-  isdefaultHeaders?: boolean;
+  hasHeaders?: boolean;
 };
 
 const defaultHeaders = {
@@ -13,13 +13,13 @@ const defaultHeaders = {
 
 export const featchData = async ({
   url,
-  isdefaultHeaders = false,
+  hasHeaders = false,
   headers = {},
 }: Props) => {
   const response = await axios.get(url, {
     method: 'GET',
     responseType: 'blob',
-    headers: isdefaultHeaders ? defaultHeaders : headers,
+    headers: hasHeaders ? defaultHeaders : headers,
   });
 
   return URL.createObjectURL(response.data);
