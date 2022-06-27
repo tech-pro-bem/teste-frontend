@@ -1,5 +1,5 @@
 import { ErrorMessage } from '../Error';
-import { Fetcher } from '../fetcher';
+import { Fetcher } from '../Fetcher';
 import { Generator } from '../Generator';
 
 export function Cat() {

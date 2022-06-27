@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { featchData } from '../api';
+import { featchData } from '../../api';
 
 export function Fetcher({
   render,
