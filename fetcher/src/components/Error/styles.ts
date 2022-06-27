@@ -14,4 +14,16 @@ const error = () => css`
   border-radius: 0.25rem;
   flex: 1;
 `;
+
+const section = () => css`
+  label: container-section;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+`;
+
 export const Error = styled.div(error);
+export const Section = styled.section(section);

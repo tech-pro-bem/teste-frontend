@@ -1,5 +1,4 @@
-import { Error } from './styles';
-import { Section } from '../styles';
+import { Error, Section } from './styles';
 
 export function ErrorMessage({ message }: { message: string }) {
   return (

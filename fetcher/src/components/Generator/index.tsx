@@ -1,5 +1,4 @@
-import * as Styles from './styles';
-import { Section } from '../styles';
+import { Button, Section } from './styles';
 
 type Props = {
   src: string;
@@ -14,9 +13,9 @@ export function Generator({ src, onClick, loading, label }: Props) {
   return (
     <Section aria-label={ariaLabel}>
       <img src={src} alt={label} />
-      <Styles.Button onClick={onClick} type="button" disabled={loading}>
+      <Button onClick={onClick} type="button" disabled={loading}>
         {label}
-      </Styles.Button>
+      </Button>
     </Section>
   );
 }

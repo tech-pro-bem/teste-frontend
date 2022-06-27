@@ -47,4 +47,15 @@ const button = () => css`
   }
 `;
 
+const section = () => css`
+  label: container-section;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+`;
+
 export const Button = styled.button(button);
+export const Section = styled.section(section);
