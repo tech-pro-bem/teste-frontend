@@ -5,13 +5,14 @@ import { Generator } from '../Generator';
 export function Dog() {
   return (
     <Fetcher
-      url="http://placekitten.com/300/200"
+      url="https://placedog.p.rapidapi.com/300/200"
+      hasHeaders={true}
       render={(url: string, fetch: Function, loading: boolean) => (
         <Generator
           src={url}
           onClick={() => fetch()}
           loading={loading}
-          label="generate cat"
+          label="generate dog"
         />
       )}
       renderFailure={(error: string) => <ErrorMessage message={error} />}

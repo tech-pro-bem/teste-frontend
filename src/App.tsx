@@ -1,6 +1,6 @@
 import * as Styles from './app';
 import { Dog } from './components/Dog';
-import { Cat } from './/components/Cat';
+import { Cat } from './components/Cat';
 
 export function App() {
   return (
