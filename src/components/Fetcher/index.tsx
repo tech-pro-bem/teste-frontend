@@ -7,8 +7,8 @@ export function Fetcher({
   renderFailure,
   hasHeaders = false,
 }: any) {
-  const [response, setResponse] = React.useState('');
   const [loading, setLoading] = React.useState(false);
+  const [response, setResponse] = React.useState('');
   const [error, setError] = React.useState('');
 
   const fetch = React.useCallback(() => {
