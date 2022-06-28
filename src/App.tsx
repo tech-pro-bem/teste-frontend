@@ -1,3 +1,4 @@
+import PetGenerator from './components/PetGenerator'
 import { Container, PetSectionWrapper, Title, Wrapper } from './styles/App.styles'
 
 function App() {
@@ -6,8 +7,8 @@ function App() {
       <Container>
         <Title>Pet Generator</Title>
         <PetSectionWrapper>
-          <div>A</div>
-          <div>B</div>
+          <PetGenerator pet='kitten' />
+          <PetGenerator pet='dog' />
         </PetSectionWrapper>
       </Container>
     </Wrapper>
