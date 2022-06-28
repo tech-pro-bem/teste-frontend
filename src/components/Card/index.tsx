@@ -35,12 +35,16 @@ function Card({type}: CardProps){
         audio.play()
     }
 
+    function changeImg(){
+        randomizeImg()
+
+        playAudio()
+    }
+
     useEffect(() => randomizeImg(), [])
 
     return (
-        <StyledCard
-            onMouseEnter={playAudio}
-        >
+        <StyledCard>
             <audio 
                 id={
                     type === "dog" ? "dog-audio" : "cat-audio"
@@ -49,7 +53,9 @@ function Card({type}: CardProps){
                     type === "dog" ? "dog.mp3" : "cat.mp3"
                 }/>
             <img width="300" height="400" src={img} alt="" />
-            <button>
+            <button
+                onClick={changeImg}
+            >
                 Gerar&nbsp; 
                 {type === "dog" ? "Cachorrinho" : "Gatinho"}
             </button>
