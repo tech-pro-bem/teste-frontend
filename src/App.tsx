@@ -1,6 +1,16 @@
+import { Container, PetSectionWrapper, Title, Wrapper } from './styles/App.styles'
+
 function App() {
   return (
-    <h1>Hello, World!</h1>
+    <Wrapper>
+      <Container>
+        <Title>Pet Generator</Title>
+        <PetSectionWrapper>
+          <div>A</div>
+          <div>B</div>
+        </PetSectionWrapper>
+      </Container>
+    </Wrapper>
   )
 }
 export default App
