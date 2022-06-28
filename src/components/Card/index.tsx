@@ -17,7 +17,12 @@ function Card({type}: CardProps){
         console.log(width, height);
 
         if(type === "dog"){
-            setImg(`https://place.dog/${width}/${height}`)
+            axios.get(`http://localhost:8010/proxy/${width}/${height}`, {responseType: "blob"})
+                .then(response => response.data)
+                .then(data => {
+                    const url = URL.createObjectURL(data)
+                    setImg(url)
+                })
         }else{
             axios.get(`http://placekitten.com/${width}/${height}`, {responseType: "blob"})
                 .then(response => response.data)
