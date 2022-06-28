@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { dogApi } from "../../services/dogApi"
-import { catApi } from "../../services/kittenApi"
+import axios from "axios"
+import {StyledCard} from "./styles"
 
 interface CardProps{
     type: "dog" | "cat"
@@ -14,16 +14,12 @@ function Card({type}: CardProps){
         const width = Math.round(random)
         const height = width + 100
 
-        console.log(width, height)
+        console.log(width, height);
 
         if(type === "dog"){
-            dogApi.get(`/${width}/${height}`, {responseType: "blob"})
-                .then(response => {
-                    const url = URL.createObjectURL(response.data)
-                    setImg(url)
-                })
+            setImg(`https://place.dog/${width}/${height}`)
         }else{
-            catApi.get(`/${width}/${height}`, {responseType: "blob"})
+            axios.get(`http://placekitten.com/${width}/${height}`, {responseType: "blob"})
                 .then(response => response.data)
                 .then(data => {
                     const url = URL.createObjectURL(data)
@@ -32,13 +28,32 @@ function Card({type}: CardProps){
         }
     }
 
+    function playAudio(){
+        const id = type === "dog" ? "dog-audio" : "cat-audio"
+        const audio = document.getElementById(id) as HTMLAudioElement
+
+        audio.play()
+    }
+
     useEffect(() => randomizeImg(), [])
 
     return (
-        <div>
+        <StyledCard
+            onMouseEnter={playAudio}
+        >
+            <audio 
+                id={
+                    type === "dog" ? "dog-audio" : "cat-audio"
+                } 
+                src={
+                    type === "dog" ? "dog.mp3" : "cat.mp3"
+                }/>
             <img width="300" height="400" src={img} alt="" />
-            <button>Gerar {type === "dog" ? "Cachorrinho" : "Gatinho"}</button>
-        </div>
+            <button>
+                Gerar&nbsp; 
+                {type === "dog" ? "Cachorrinho" : "Gatinho"}
+            </button>
+        </StyledCard>
     )
 }
 
