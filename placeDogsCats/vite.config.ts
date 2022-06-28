@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/main.tsx'),
+      entry: path.resolve(__dirname, 'src/pages/main.tsx'),
       name: 'MyLib',
       fileName: (format) => `my-lib.${format}.js`
     },
