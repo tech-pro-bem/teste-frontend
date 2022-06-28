@@ -1,5 +1,7 @@
 import axios from "axios"
 
-const api = axios.create({
+const catApi = axios.create({
     baseURL: "http://placekitten.com"
 })
+
+export {catApi}

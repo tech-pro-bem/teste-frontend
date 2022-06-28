@@ -1,3 +1,4 @@
+import { Card } from "./components/Card";
 import { GlobalStyle } from "./styles/GlobalStyle";
 
 function App() {
@@ -5,7 +6,10 @@ function App() {
     <>
       <GlobalStyle/>
       <div className="App">
-        Hello world
+        <Card type="dog"/>
+      </div>
+      <div className="App">
+        <Card type="cat"/>
       </div>
     </>
   );

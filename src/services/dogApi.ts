@@ -1,5 +1,7 @@
 import axios from "axios"
 
-const api = axios.create({
-    baseURL: "https://place.dog"
+const dogApi = axios.create({
+    baseURL: "https://cors-anywhere.herokuapp.com/https://place.dog"
 })
+
+export {dogApi}
