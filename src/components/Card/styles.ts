@@ -4,9 +4,17 @@ const StyledCard = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 .5rem;
 
     img{
         border-radius: .5rem;
+        width: 300px;
+        height: 400px;
+
+        @media(max-width: 380px){
+            width: 200px;
+            height: 300px;
+        }
     }
 
     button{
@@ -27,6 +35,10 @@ const StyledCard = styled.div`
             border-color: #4466ff;
             color: #4466ff;
             background-color: #0000;
+        }
+
+        @media(max-width: 380px){
+            font-size: .75rem;
         }
     }
 `

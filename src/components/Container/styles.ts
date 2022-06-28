@@ -6,7 +6,12 @@ const StyledContainer = styled.main`
     width: 100%;
     max-width: 720px;
     margin: 6rem auto 6rem;
-    padding: 2rem;
+
+    @media(max-width: 720px){
+        grid-template-columns: none;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 4rem;
+    }
 `
 
 export {StyledContainer}

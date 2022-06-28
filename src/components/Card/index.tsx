@@ -52,7 +52,7 @@ function Card({type}: CardProps){
                 src={
                     type === "dog" ? "dog.mp3" : "cat.mp3"
                 }/>
-            <img width="300" height="400" src={img} alt="" />
+            <img src={img} alt="" />
             <button
                 onClick={changeImg}
             >
