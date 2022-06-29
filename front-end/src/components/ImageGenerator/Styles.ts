@@ -26,4 +26,9 @@ export const Button = styled.button`
   color: #ffff;
   font-weight: bold;
   font-size: 1.8rem;
+  transition: filter .2s ease-in-out;
+
+  &:hover {
+    filter: brightness(.8);
+  }
 `
