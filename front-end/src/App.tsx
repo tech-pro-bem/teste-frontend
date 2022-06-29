@@ -1,6 +1,17 @@
+import { ImageGenerator } from "./components/ImageGenerator/Index"
+import { GlobalStyle } from "./styles/global"
+
 function App() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <main>
+        <section>
+          <ImageGenerator petType="cat" width={200} height={300}/>
+          <ImageGenerator petType="dog" width={200} height={300}/>
+          <GlobalStyle/>
+        </section>
+      </main>
+    </>
   )
 }
 
