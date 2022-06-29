@@ -13,6 +13,7 @@ export const Container = styled.section`
     margin: 4rem auto;
     width: 20rem;
     height: 30rem;
+    object-fit: cover;
   }
 `
 
