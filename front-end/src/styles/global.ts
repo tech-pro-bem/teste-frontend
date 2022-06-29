@@ -17,24 +17,39 @@ export const GlobalStyle = createGlobalStyle`
 
   main {
     width: 100%;
-    height: 100vh;
-    background-color: red;
+    min-height: 100vh;
+
+    background-color: #F8F8FF;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    > h1 {
+      text-align: center;
+      margin-top: 6rem;
+      margin-bottom: 4rem;
+      font-size: 3rem;
+      color: #00BFFF;
+    }
 
     > section {
-      display: flex;
-      justify-content: space-around;
-
-      max-width: 100rem;
+      
+      max-width: 120rem;
       width: 100%;
-
-      margin: 0 2rem;
-
-      height: 60rem;
-      background-color: #ffff;
+      margin: 0 auto;
+      
+      min-height: 60rem;
+      
+      > div {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+  
+        width: 100%;
+        height: 100%;
+      }
       
     }
   }
