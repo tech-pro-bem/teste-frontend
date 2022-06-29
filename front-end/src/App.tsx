@@ -5,12 +5,17 @@ function App() {
   return (
     <>
       <main>
+        <h1>Pet Generator</h1>
         <section>
-          <ImageGenerator petType="cat" width={200} height={300}/>
-          <ImageGenerator petType="dog" width={200} height={300}/>
-          <GlobalStyle/>
+          <div>
+            <ImageGenerator petType="cat"/>
+            <ImageGenerator petType="dog"/>
+            <ImageGenerator petType="cat" width={100} height={500}/>
+            <ImageGenerator petType="dog" width={100} height={500}/>
+          </div>
         </section>
       </main>
+      <GlobalStyle/>
     </>
   )
 }
