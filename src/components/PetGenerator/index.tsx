@@ -1,4 +1,5 @@
 import {useRef} from "react"
+import { PetGeneratorContainer } from "./styles";
 
 interface PetGeneratorProps {
     url: string,
@@ -17,9 +18,9 @@ export function PetGenerator(props: PetGeneratorProps) {
     }
 
     return (
-        <>
-            <button onClick={handleClick}>{title}</button>
+        <PetGeneratorContainer>
             <img src={url} ref={imageRef} alt="imagem de pet" />
-        </>
+            <button onClick={handleClick}>{title}</button>
+        </PetGeneratorContainer>
     )
 }
