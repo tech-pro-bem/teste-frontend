@@ -33,7 +33,7 @@ export default function fetchPet(pet) {
 
   if (pet === "cat") {
     const randomNumber = Math.floor(Math.random() * 16 + 1);
-    url = `http://placekitten.com/350/350?image=${randomNumber}`;
+    url = `https://placekitten.com/350/350?image=${randomNumber}`;
   }
 
   return fetchImg(url, headers);

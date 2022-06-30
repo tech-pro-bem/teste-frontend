@@ -17,15 +17,16 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(160deg, #9A86A4 1%, rgba(43, 83, 162, 0.5) 100%);
-    background-repeat: no-repeat;
-    font-family: 'Inkfree';
-
     .App {
-      height: 100vh;
-      text-align: center;
-      position: relative;
+      background: linear-gradient(160deg, #9A86A4 1%, rgba(43, 83, 162, 0.5) 100%);
+      background-repeat: no-repeat;
+      font-family: 'Inkfree';
+      min-height: 100vh;
+      text-align: center;      
       padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       h1 {
         margin-bottom: 100px;
@@ -40,14 +41,16 @@ const GlobalStyle = createGlobalStyle`
 
 const Generators = styled.div`
   display: flex;
-  width: 1200px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  & > * {
+    margin-bottom: 50px;
+  }
 `;
 
 function App() {
