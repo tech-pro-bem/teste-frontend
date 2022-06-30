@@ -1,4 +1,3 @@
-import Images from '../../img/1.jpg';
 import styled from 'styled-components';
 import Button from '../Button/Button';
 
@@ -11,9 +10,9 @@ const CardCss = styled.div`
 const Card = () => {
   return (
     <CardCss>
-      <img src={Images} alt='' />
+      <img src={''} alt='' />
       <div>
-        <Button title='Gerar gatinho'/>
+        <Button title='Gerar gatinho' />
       </div>
     </CardCss>
   );
