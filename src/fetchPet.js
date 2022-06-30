@@ -19,11 +19,12 @@ const fetchImg = (url, headers) => {
     });
 };
 
-export default function fetchPet(pet) {
+export default function fetchPet(pet, width, height) {
   let url = "";
   let headers = {};
 
   if (pet === "dog") {
+    // API doesn't work with different resolutions
     url = "https://placedog.p.rapidapi.com/300/200";
     headers = {
       "X-RapidAPI-Key": process.env.REACT_APP_API_KEY,
@@ -33,7 +34,7 @@ export default function fetchPet(pet) {
 
   if (pet === "cat") {
     const randomNumber = Math.floor(Math.random() * 16 + 1);
-    url = `https://placekitten.com/350/350?image=${randomNumber}`;
+    url = `https://placekitten.com/${width}/${height}?image=${randomNumber}`;
   }
 
   return fetchImg(url, headers);

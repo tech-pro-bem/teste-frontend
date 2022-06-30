@@ -6,8 +6,8 @@ const Wrapper = styled.div`
   img {
     display: flex;
     flex-direction: column;
-    width: 350px;
-    height: 350px;
+    width: ${({ width }) => `${width}px`};
+    height: ${({ height }) => `${height}px`};
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0px 4px 20px 3px rgba(0, 0, 0, 0.5);
@@ -35,12 +35,12 @@ const Wrapper = styled.div`
   }
 `;
 
-export default function PetGenerator({ pet, text }) {
+export default function PetGenerator({ pet, text, width, height }) {
   const [imgUrl, setImgUrl] = useState();
 
   const fetch = async () => {
     let url;
-    url = await fetchPet(pet);
+    url = await fetchPet(pet, width, height);
     setImgUrl(url);
   };
 
@@ -49,7 +49,7 @@ export default function PetGenerator({ pet, text }) {
   }, []);
 
   return (
-    <Wrapper>
+    <Wrapper width={width} height={height}>
       <img src={imgUrl} alt="Pet" />
       <button onClick={fetch}>{text || "Click"}</button>
     </Wrapper>

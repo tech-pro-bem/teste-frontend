@@ -60,8 +60,18 @@ function App() {
       <div className="App">
         <h1>Pet Generator</h1>
         <Generators>
-          <PetGenerator pet="cat" text={"click here if you're feeling sad"} />
-          <PetGenerator pet="dog" text={"or here ;)"} />
+          <PetGenerator
+            pet="cat"
+            text={"click here if you're feeling sad"}
+            width="350"
+            height="350"
+          />
+          <PetGenerator
+            pet="dog"
+            text={"or here ;)"}
+            width="350"
+            height="350"
+          />
         </Generators>
       </div>
     </>
