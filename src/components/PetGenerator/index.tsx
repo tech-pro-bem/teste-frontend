@@ -3,23 +3,27 @@ import { PetGeneratorContainer } from "./styles";
 
 interface PetGeneratorProps {
     url: string,
-    title: string
+    title: string,
+    width: string,
+    height: string
 }
 
 export function PetGenerator(props: PetGeneratorProps) {
-    const { url, title } = props;
-    const imageRef = useRef<HTMLImageElement>(null)
+    const { url, title, height, width } = props;
+    const newUrl = `${url}/${width}/${height}`;
+    console.log(newUrl)
+    const imageRef = useRef<HTMLImageElement>(null);
 
     function handleClick() {
         let timestamp = new Date().getTime(); 
         if(imageRef.current !== null){
-            imageRef.current.src = `${url}?t=${timestamp}`
+            imageRef.current.src = `${newUrl}?t=${timestamp}`
         }       
     }
 
     return (
         <PetGeneratorContainer>
-            <img src={url} ref={imageRef} alt="imagem de pet" />
+            <img src={newUrl} ref={imageRef} alt="imagem de pet" />
             <button onClick={handleClick}>{title}</button>
         </PetGeneratorContainer>
     )

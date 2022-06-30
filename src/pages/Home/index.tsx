@@ -11,8 +11,8 @@ export function Home() {
       <GlobalStyle />
       <Header />
       <PetGeneratorContainer>
-        <PetGenerator url="https://place.dog/200/200" title="Gerar cachorrinho" />
-        <PetGenerator url="http://placekitten.com/200/200" title="Gerar gatinho" />
+        <PetGenerator url="https://place.dog" title="Gerar cachorrinho" width="200" height="200" />
+        <PetGenerator url="http://placekitten.com" title="Gerar gatinho" width="200" height="200" />
       </PetGeneratorContainer>
       <Footer />
     </HomeContainer>
