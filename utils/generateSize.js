@@ -1,4 +1,4 @@
-const SIZES = [300, 400, 500, 600, 700]
+const SIZES = [300, 400, 500, 600]
 
 export function generateSize() {
   const height = SIZES[Math.floor(Math.random() * SIZES.length)]
