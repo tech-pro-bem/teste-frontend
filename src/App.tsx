@@ -7,7 +7,7 @@ type URL = {
   cat: string;
   dog: string;
 };
-
+// https://placedog.p.rapidapi.com/300/
 const ApiUrl: URL = {
   cat: 'http://placekitten.com/200/300',
   dog: 'https://place.dog/400/400',
@@ -32,8 +32,18 @@ function App() {
     <Container>
       <h2>Pet Generator</h2>
       <main>
-        <Card url={url.cat} getFunction={getCatUrl} loading={loading} />
-        <Card url={url.dog} getFunction={getDogUrl} loading={loading} />
+        <Card
+          url={url.cat}
+          getFunction={getCatUrl}
+          loading={loading}
+          title='Gerar Gatinho'
+        />
+        <Card
+          url={url.dog}
+          getFunction={getDogUrl}
+          loading={loading}
+          title='Gerar Cachorinho'
+        />
       </main>
     </Container>
   );

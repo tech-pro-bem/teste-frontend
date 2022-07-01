@@ -22,16 +22,17 @@ const CardCss = styled.div`
 
 type Props = {
   url: string;
+  title: string;
   loading: boolean;
   getFunction: () => void;
 };
 
-const Card = ({ url, getFunction, loading }: Props) => {
+const Card = ({ url, getFunction, loading, title }: Props) => {
   return (
     <CardCss>
       <img src={url} alt='Animal' />
       <div>
-        <Button title='Gerar gatinho' onClick={getFunction} loading={loading} />
+        <Button title={title} onClick={getFunction} loading={loading} />
       </div>
     </CardCss>
   );
