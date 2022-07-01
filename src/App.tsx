@@ -1,10 +1,9 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import styles from '../src/global.module.scss';
+import { Header } from './components/Header';
 
 function App() {
   return(
-    <h1></h1>
+    <Header></Header>
   );
 }
 
