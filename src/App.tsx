@@ -1,58 +1,39 @@
 import React from 'react';
-import styled from 'styled-components';
 import Card from './components/Card/Card';
-import useFetch from './hooks/useFecth';
+import useFetch from './hooks/useFetch';
+import { Container } from './style';
 
-const Container = styled.div`
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
-  h2 {
-    text-align: center;
-    font-family: 'IBM Plex Mono', monospace;
-    margin: 2rem 0;
-    text-transform: uppercase;
-  }
-  main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+type URL = {
+  cat: string;
+  dog: string;
+};
 
-    @media (max-width: 40rem) {
-      grid-template-columns: 1fr;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      border-radius: 0.6rem;
-      box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
-    }
-  }
-`;
+const ApiUrl: URL = {
+  cat: 'http://placekitten.com/200/300',
+  dog: 'https://place.dog/400/400',
+};
 
 function App() {
-  const { data, error, loading, request } = useFetch();
+  const [url, setUrl] = React.useState<URL>(ApiUrl);
+  const { loading, request } = useFetch();
 
-  React.useEffect(() => {
-    (async () => {
-      const url = 'https://place.dog/300/200';
-      const r = await fetch(url);
-      const j = await r.json();
-      console.log(j);
-    })();
-  }, []);
-
-  // console.log(data);
-
-  if (loading) return <p>Caregando...</p>;
+  async function getCatUrl() {
+    const Ramndom = () => Math.floor(Math.random() * (400 - 100) + 100);
+    const { urlCreated } = await request(
+      `https://placekitten.com/${Ramndom()}/${Ramndom()}`
+    );
+    setUrl({ ...url, cat: `${urlCreated}` });
+  }
+  async function getDogUrl() {
+    const { urlCreated } = await request('https://place.dog/400/400');
+    setUrl({ ...url, dog: `${urlCreated}` });
+  }
   return (
     <Container>
       <h2>Pet Generator</h2>
-      {}
       <main>
-        <Card />
-        <Card />
+        <Card url={url.cat} getFunction={getCatUrl} loading={loading} />
+        <Card url={url.dog} getFunction={getDogUrl} loading={loading} />
       </main>
     </Container>
   );

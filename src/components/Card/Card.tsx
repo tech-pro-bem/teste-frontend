@@ -5,14 +5,33 @@ const CardCss = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  div.loading {
+    width: 100%;
+    border-radius: 0.6rem;
+    height: 300px;
+    background: red;
+  }
+  img {
+    display: block;
+    width: 100%;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    height: 20rem;
+  }
 `;
 
-const Card = () => {
+type Props = {
+  url: string;
+  loading: boolean;
+  getFunction: () => void;
+};
+
+const Card = ({ url, getFunction, loading }: Props) => {
   return (
     <CardCss>
-      <img src={''} alt='' />
+      <img src={url} alt='Animal' />
       <div>
-        <Button title='Gerar gatinho' />
+        <Button title='Gerar gatinho' onClick={getFunction} loading={loading} />
       </div>
     </CardCss>
   );
