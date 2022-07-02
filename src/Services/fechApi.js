@@ -14,3 +14,19 @@ export const getCats = async () => {
 
   return response;
 };
+
+export const getDogs = async () => {
+  const response = await axios
+    .get("https://placedog.p.rapidapi.com/300/200", {
+      responseType: "blob",
+      headers: {
+        "X-RapidAPI-Key": "d351acab07mshf2a7d5634f9c235p103268jsnae0600f3d237",
+        "X-RapidAPI-Host": "placedog.p.rapidapi.com",
+      },
+    })
+    .then((response) => {
+      const image = URL.createObjectURL(response.data);
+      return image;
+    });
+  return response;
+};

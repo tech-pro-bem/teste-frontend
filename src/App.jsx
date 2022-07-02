@@ -1,22 +1,32 @@
 import React, { useState, useEffect } from "react";
-import { getCats } from "./Services/fechApi";
+import { getCats, getDogs } from "./Services/fechApi";
 import { Animals } from "./components/Animals";
 
 function App() {
   const [cat, setCat] = useState();
-
-  console.log(cat);
+  const [dog, setDog] = useState();
 
   useEffect(() => {
     getCats().then((res) => {
       setCat(res);
     });
+
+    getDogs().then((res) => {
+      setDog(res);
+    });
   }, []);
+
+  console.log(getDogs());
 
   return (
     <div className="App">
-      {cat && (
-        <Animals imagem={cat} btnText="Gerar Gatinho" getMorCats={setCat} />
+      {dog ? (
+        <>
+          <Animals imagem={cat} btnText="Gerar Gatinho" getMor={setCat} />
+          <Animals imagem={dog} btnText="Gerar Cachorro" getMor={setDog} />
+        </>
+      ) : (
+        <p>Loading...</p>
       )}
     </div>
   );

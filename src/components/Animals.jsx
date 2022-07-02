@@ -1,14 +1,16 @@
-import { getCats } from "../Services/fechApi";
+import { getCats, getDogs } from "../Services/fechApi";
 
-export const Animals = ({ imagem, btnText, getMorCats }) => {
+export const Animals = ({ imagem, btnText, getMor }) => {
   const handleCat = () => {
     getCats().then((data) => {
-      getMorCats(data);
+      getMor(data);
     });
   };
 
   const handleDog = () => {
-    console.log("dog");
+    getDogs().then((data) => {
+      getMor(data);
+    });
   };
 
   return (
