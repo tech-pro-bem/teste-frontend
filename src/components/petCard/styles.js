@@ -26,6 +26,7 @@ export const CardImageContainer = styled.div`
 `
 
 export const CardInfo = styled.header`
+    position: relative;
     width: 100%;
     min-height: 6rem;
     padding: 1rem;
@@ -37,6 +38,22 @@ export const CardInfo = styled.header`
 
     .card-link {
         color: #888;
+    }
+
+    .copy-link {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    .copy-link-success {
+        color: #14AE5C;
+    }
+
+    .copy-link-error {
+        color: #F24822;
     }
 `
 

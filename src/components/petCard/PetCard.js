@@ -4,8 +4,14 @@ import Button from '../button/Button'
 import { copyTextToClipboard } from '../../services/utils/copyTextToClipboard'
 import { getCatPic, getDogPic } from '../../services/api/requestHandlers'
 
+const linkCopyInit = {
+  type: "",
+  message: ""
+}
+
 function PetCard({title, petType}) {
   const [link, setLink] = useState("https://google.com/")
+  const [copyLinkStatus, setCopyLinkStatus] = useState(linkCopyInit)
 
   const petPics = {
     cat: getCatPic,
@@ -20,8 +26,24 @@ function PetCard({title, petType}) {
   const handleCopyLink = () => {
     try {
       copyTextToClipboard(link)
+      setCopyLinkStatus({
+        type: "success",
+        message: "Link copiado!"
+      })
+
+      setTimeout(() => {
+        setCopyLinkStatus(linkCopyInit)
+      }, 3000);
+
     } catch(error) {
-      console.log(error)
+      setCopyLinkStatus({
+        type: "error",
+        message: "Erro ao copiar link"
+      })
+
+      setTimeout(() => {
+        setCopyLinkStatus(linkCopyInit)
+      }, 3000);
     }
   }
 
@@ -38,6 +60,7 @@ function PetCard({title, petType}) {
         <CardInfo>
             <h2 className="card-title">{title}</h2>
             <p className="card-link">{link}</p>
+            <p className={`copy-link copy-link-${copyLinkStatus.type}`}>{copyLinkStatus.message}</p>
         </CardInfo>
         <CardFooter>
             <Button type="button" theme="secondary" action={handleCopyLink}>Copiar link</Button>
