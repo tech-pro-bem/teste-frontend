@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes, { number } from 'prop-types';
+import styled from 'styled-components';
+
+const StyledImage = styled.img`
+  border-radius: 2rem;
+`;
 
 function Image({ api, size, animal }) {
   return (
-    <img src={`${api}/${size.width}/${size.height}`} alt={`Foto gerada randomicamente de um ${animal}`} />
+    <StyledImage src={`${api}/${size.width}/${size.height}`} alt={`Foto gerada randomicamente de um ${animal}`} />
   );
 }
 
