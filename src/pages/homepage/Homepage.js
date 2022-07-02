@@ -1,8 +1,9 @@
-import Topbar from "../../components/topbar/Topbar";
 
 function Homepage() {
   return (
-    <Topbar />
+    <main>
+      Hello World
+    </main>
   )
 }
 
