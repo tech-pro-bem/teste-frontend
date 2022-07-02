@@ -13,8 +13,8 @@ export default function Home() {
           <h2>Cães</h2>
         </div>
         <div className="ContentPet">
-          <GeneratorPets status="gatos" imageURL="http://placekitten.com" />
-          <GeneratorPets status="caes" imageURL="https://place.dog" />
+          <GeneratorPets status="gatos" api="http://placekitten.com" />
+          <GeneratorPets status="caes" api="https://place.dog" />
         </div>
         <div className="TechProBem">
           <img src={Logo} alt="Logo" className="Logo" />
