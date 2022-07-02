@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const TextButton = styled.button`
     width: calc(50% - 1rem);
+    min-width: 12rem;
     padding: 0.5rem 1rem;
     font-size: 1rem;
     border-radius: 0.25rem;

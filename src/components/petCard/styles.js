@@ -27,7 +27,7 @@ export const CardImageContainer = styled.div`
 
 export const CardInfo = styled.header`
     width: 100%;
-    height: 6rem;
+    min-height: 6rem;
     padding: 1rem;
 
     .card-title {
@@ -48,5 +48,6 @@ export const CardFooter = styled.footer`
     gap: 0.5rem;
     width: calc(100% - 2rem);
     min-height: 4.5rem;
+    padding: 1rem 0;
     border-top: 1px solid #eee;
 `
