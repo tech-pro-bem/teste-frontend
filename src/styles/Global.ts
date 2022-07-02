@@ -1,12 +1,24 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
+import { mixinsStyled } from "./mixins";
 
 export default createGlobalStyle`
     body{
         font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
+        font-size: 12px;
         font-smooth: antialiased;
         -webkit-font-smoothing: antialiased;
         text-rendering: geometricPrecision;
+        ${mixinsStyled.sm`
+            ${css`
+                font-size: 14px;
+            `}
+        `}
+
+        ${mixinsStyled.lg`
+            ${css`
+                font-size: 16px;
+            `}
+        `}
 
     }
     *{

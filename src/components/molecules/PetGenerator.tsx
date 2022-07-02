@@ -12,7 +12,7 @@ const animals = {
 const generateRandomWidth = () => Math.floor(Math.random() * (300 - 100) + 100);
 
 export const Container = styled.div`
-    width: 300px;
+    width: 18.75em;
     margin: 0 auto;
     display: inline-flex;
     flex-direction: column;
