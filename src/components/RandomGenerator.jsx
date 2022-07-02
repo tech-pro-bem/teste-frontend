@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import Button from './Button';
+import Image from './Image';
 
 function RandomGenerator({ animal, api }) {
   const [size, setSize] = useState({ width: 200, height: 300 });
@@ -16,6 +18,8 @@ function RandomGenerator({ animal, api }) {
 
   return (
     <div>
+      <Button animal={animal} onClick={generateNewSize} />
+      <Image api={api} size={size} animal={animal} />
     </div>
   );
 }
