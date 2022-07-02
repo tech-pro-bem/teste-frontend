@@ -12,12 +12,17 @@ const StyledDiv = styled.div`
   margin: 1em 0;
 `;
 
-function RandomGenerator({ animal, api }) {
-  const [size, setSize] = useState({ width: 200, height: 300 });
+function RandomGenerator({ animal }) {
+  const [cat, setCat] = useState(parseInt(Math.random() * (16 - 0) + 0, 10));
 
-  const generateNewSize = () => {
-    const max = 500;
-    const min = 200;
+  const generateNewCat = () => {
+    const max = 16;
+    const min = 0;
+
+    setCat(
+      parseInt(Math.random() * (max - min) + min, 10),
+    );
+  };
 
     setSize({
       width: parseInt(Math.random() * (max - min) + min, 10),
