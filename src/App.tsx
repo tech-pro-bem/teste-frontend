@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Animal } from "./components/Animal";
 import { Button } from "./components/Button";
 import { fetchCats, fetchDogs } from "./services/api";
+import { PawPrint } from 'phosphor-react';
 
 export function App() {
   const [animal, setAnimal] = useState<string>('');
@@ -24,6 +25,7 @@ export function App() {
     <main>
       <div>
         <h1>
+          <PawPrint size={32} />
           Pet Generator
         </h1>
         <Button
