@@ -12,13 +12,18 @@ export const AppFooter = styled.footer`
 `
 
 export const FooterInfo = styled.span`
+    width: 100%;
     font-size: 1rem;
     text-align: center;
     color: #fff;
-    
-    & + & {
-        padding-left: 1.5rem;
-        border-left: 2px solid #676767;
+
+    @media (min-width: 500px) {
+        width: auto;
+
+        & + & {
+            padding-left: 1.5rem;
+            border-left: 2px solid #676767;
+        }
     }
 `
 
