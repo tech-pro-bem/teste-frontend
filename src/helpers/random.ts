@@ -1,5 +1,4 @@
 export function random() {
-  const width = Math.floor((Math.random() * (600 - 300)) + 300);
-  const height = Math.floor((Math.random() * (600 - 300)) + 300);
-  return { width, height };
+  const catNumber = ((Math.random() * (16 - 0)) + 0).toFixed(0);
+  return { catNumber };
 }
