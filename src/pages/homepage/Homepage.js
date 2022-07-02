@@ -1,9 +1,12 @@
+import Card from "../../components/card/Card"
+import { PageContent } from "./styles"
 
 function Homepage() {
   return (
-    <main>
-      Hello World
-    </main>
+    <PageContent>
+      <Card title="Gatinho"/>
+      <Card title="Cachorrinho"/>
+    </PageContent>
   )
 }
 
