@@ -1,46 +1,70 @@
-> Olá! 
-> 
-> Ficamos muito felizes que você queira fazer parte da equipe ^^
-> 
-> A primeira etapa do seu processo seletivo começa aqui.
-> 
-> Para completar sua inscrição, basta entregar este teste técnico seguindo as instruções abaixo.
+# Getting Started with Create React App
 
-# Tech Pro Bem - Teste Front-End
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Faça um fork deste repositório e ao finalizar o teste, submeta um pull request para o repositório. 
+## Available Scripts
 
-**Inclua suas informações de contato na descrição de seu pull request (e-mail, telefone ou LinkedIn).**
+In the project directory, you can run:
 
-## Objetivo
-- Crie um componente React reutilizável que faça um **fetch** ao clicar de um botão.
-- Instancie seu componete de forma que retorne o resultado randomico e exiba a imagem obtida da API [Place Kitten](https://placekitten.com/).
-- Faça uma nova instância do componente, mas dessa vez retorne o resultado da requisição da API [Place Dogs](https://place.dog/) e exiba a imagem obtida.
+### `npm start`
 
-** Crie uma interface do seu gosto para exibir os resultados. Não precisa ser nada elaborado, não estamos avaliando design. Mostre sua criatividade. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## O que vamos avaliar:
-- Organização do código;
-- Reutilização do componente criado;
-- Estilização do componente;
-- Organização de commits;
-- Apresentação da solução no pull request;
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-## Diferenciais
-- Utilizar parâmetros para a busca.
-- CSS in JS
-- Axios
+### `npm test`
 
-## Exemplo de consumos das APIS:
-- https://place.dog/300/200
-- http://placekitten.com/200/300
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-## Exemplo do resultado esperado:
+### `npm run build`
 
-![proto](https://user-images.githubusercontent.com/29049644/171073674-80d6c19b-0a01-4bad-b81f-cac0cb424689.gif)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Em caso de dúvidas
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Caso você encontre algum problema para resolver o desafio, por favor, veja a sessão de [issues](https://github.com/tech-pro-bem/teste-frontend/issues). 
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Se ainda continuar com dúvidas, sinta-se a vontade para abrir uma nova issue descrevendo os problemas que você está enfrentando.
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
