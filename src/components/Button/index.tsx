@@ -1,3 +1,5 @@
+import { StyledButton } from './styles';
+
 interface Props {
   title: string;
   handle: () => void;
@@ -5,8 +7,8 @@ interface Props {
 
 export function Button({ handle, title }: Props) {
   return (
-    <button type={'button'} onClick={handle}>
+    <StyledButton type={'button'} onClick={handle}>
       {title}
-    </button>
+    </StyledButton>
   );
 }
