@@ -1,11 +1,11 @@
-import Card from "../../components/card/Card"
+import PetCard from "../../components/petCard/PetCard"
 import { PageContent } from "./styles"
 
 function Homepage() {
   return (
     <PageContent>
-      <Card title="Gatinho"/>
-      <Card title="Cachorrinho"/>
+      <PetCard title="Gatinho" petType={"cat"}/>
+      <PetCard title="Cachorrinho" petType={"dog"}/>
     </PageContent>
   )
 }
