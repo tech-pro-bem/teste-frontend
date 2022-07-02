@@ -1,9 +1,10 @@
 import './App.css';
+import ReusableComponent from './Components/ReusableComponent';
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <ReusableComponent url ={'http://placekitten.com'} animal={"gatinho"}/>
     </div>
   );
 }
