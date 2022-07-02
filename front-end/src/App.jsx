@@ -5,15 +5,42 @@ import './App.css'
 
 function App() {
 
+    const [widthCat, setWidthCat] = useState(300);
+    const [heightCat, setHeightCat] = useState(250);
+
+    const [widthDog, setWidthDog] = useState(300);
+    const [heightDog, setHeightDog] = useState(250);
+
+    const [catImg, setCatImg] = useState(`https://placekitten.com/${widthCat}/${heightCat}`);
+    const [dogImg, setDogImg] = useState(`https://place.dog/${widthDog}/${heightDog}`);
+
+    useEffect(() => {
+        setCatImg(`https://placekitten.com/${widthCat}/${heightCat}`);
+    }, [widthCat || heightCat]);
+
+    useEffect(() => {
+        setDogImg(`https://place.dog/${widthDog}/${heightDog}`);
+    }, [widthDog || heightDog]);
+    
+    function getRandomCat() {
+        setWidthCat(Math.floor(Math.random() * (300 - 250 + 1)) + 250);
+        setHeightCat(Math.floor(Math.random() * (250 - 200 + 1)) + 200);
+    }
+
+    function getRandomDog() {
+        setWidthDog(Math.floor(Math.random() * (300 - 250 + 1)) + 250);
+        setHeightDog(Math.floor(Math.random() * (250 - 200 + 1)) + 200);
+    }
+
     return (
         <>
             <Title>Pet Generator</Title>
 
             <DivContainer>
-                <Button>Gerar Gatinho</Button>
-                <Images alt="imagem de um gato"></Images>
-                <Button>Gerar Cachorrinho</Button>
-                <Images alt="imagem de um cachorro"></Images>
+                <Button onClick={getRandomCat}>Gerar Gatinho</Button>
+                <Images src={catImg} alt="imagem de um gato"></Images>
+                <Button onClick={getRandomDog}>Gerar Cachorrinho</Button>
+                <Images src={dogImg} alt="imagem de um cachorro"></Images>
             </DivContainer>
             
         </>
