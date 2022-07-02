@@ -1,10 +1,17 @@
-import { useState } from "react";
-import Button from "./components/atoms/Button";
+import { PetGenerator } from "@molecules";
 
 function App() {
     return (
-        <div className="App">
-            <Button>Test</Button>
+        <div
+            style={{
+                display: "inline-flex",
+                flexDirection: "column",
+                gap: "2em",
+            }}
+            className="App"
+        >
+            <PetGenerator />
+            <PetGenerator animal="dog" />
         </div>
     );
 }
