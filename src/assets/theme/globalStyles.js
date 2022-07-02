@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100vh;
     background-color: #F7F9FA;
+    font-family: 'Nunito', sans-serif;
   }
 `
 export default GlobalStyle;
