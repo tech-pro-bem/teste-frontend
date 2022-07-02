@@ -3,8 +3,8 @@ import axios from "axios";
 import Styles from "./ReusableComponent.module.css";
 
 const ReusableComponent = ({ url, animal }) => {
-  const [width, setWidth] = useState();
-  const [height, setHeight] = useState();
+  const [width, setWidth] = useState(200);
+  const [height, setHeight] = useState(200);
 
   const [image, setImage] = useState("");
   const [imageDog, setImageDog] = useState("");
