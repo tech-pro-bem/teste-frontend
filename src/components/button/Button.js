@@ -1,6 +1,8 @@
-function Button({children}) {
+import { TextButton } from "./style"
+
+function Button({children, theme, action}) {
   return (
-    <TextButton>
+    <TextButton theme={theme} onClick={action}>
         {children}
     </TextButton>
   )
