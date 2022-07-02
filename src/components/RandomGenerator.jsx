@@ -1,7 +1,16 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import Button from './Button';
 import Image from './Image';
+
+const StyledDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  margin: 1em 0;
+`;
 
 function RandomGenerator({ animal, api }) {
   const [size, setSize] = useState({ width: 200, height: 300 });
@@ -17,10 +26,10 @@ function RandomGenerator({ animal, api }) {
   };
 
   return (
-    <div>
+    <StyledDiv>
       <Button animal={animal} onClick={generateNewSize} />
       <Image api={api} size={size} animal={animal} />
-    </div>
+    </StyledDiv>
   );
 }
 
