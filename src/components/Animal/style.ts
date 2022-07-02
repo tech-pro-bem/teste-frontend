@@ -5,5 +5,7 @@ export const Image = styled.img`
   border-bottom: 80px solid white;
   border-radius: 12px;
 
-  max-width: 600px;
+  max-width: 320px;
+  height: 385px;
+  object-fit: cover;
 `
