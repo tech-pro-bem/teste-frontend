@@ -14,8 +14,8 @@ const StyledContainer = styled.div`
 function AnimalsContainer() {
   return (
     <StyledContainer>
-      <RandomGenerator animal="gato" api="http://placekitten.com" />
-      <RandomGenerator animal="cachorro" api="https://place.dog" />
+      <RandomGenerator animal="gato" />
+      <RandomGenerator animal="cachorro" />
     </StyledContainer>
   );
 }
