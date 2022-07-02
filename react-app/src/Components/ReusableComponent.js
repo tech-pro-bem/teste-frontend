@@ -1,5 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
+import Styles from './ReusableComponent.module.css'
 const ReusableComponent = ({url, animal }) => {
   const [width, setWidth] = useState(200);
   const [height, setHeight] = useState(200);
@@ -20,8 +21,12 @@ const ReusableComponent = ({url, animal }) => {
 
 
   return (
-    <>
+<>
+    <div className={Styles['container']}>
+
+    <h1 className={Styles['h1']}>Pet Generator</h1>
       <button
+        className={Styles['button']}
         onClick={() => {
           setWidth(Math.floor(Math.random() * 500) + 200);
           setHeight( Math.floor(Math.random() * 500)+ 200);
@@ -30,12 +35,12 @@ const ReusableComponent = ({url, animal }) => {
       >
         Gerar {animal}
       </button>
-      <img src={image}></img>;
+      <img className={Styles['image']} src={image}></img>
+    
+
+    </div>
     </>
   );
 };
 
 export default ReusableComponent;
-
-
-
