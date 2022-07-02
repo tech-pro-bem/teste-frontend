@@ -1,5 +1,5 @@
 import { PropsWithChildren, useEffect, useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Icons from "./Icons";
 
 type Props = PropsWithChildren<
@@ -10,10 +10,10 @@ type Props = PropsWithChildren<
 >;
 
 const Container = styled.div`
-    width: 300px;
+    width: 18.75em;
     position: relative;
     overflow: hidden;
-    border-radius: 6px;
+    border-radius: 0.4em;
     aspect-ratio: 14 / 16;
 
     img {
