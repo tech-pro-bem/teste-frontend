@@ -16,12 +16,15 @@ export default function GeneratorPets({ api, status }) {
     <div className="ContainerGenerator">
       <div className="BoxGenetator">
         <div className="BoxPet">
-          <img className="" src={`${api}/${randomWidth}/${randomHeight}`} />
+          <img
+            className="ImgPet"
+            src={`${api}/${randomWidth}/${randomHeight}`}
+          />
         </div>
       </div>
 
       <div
-        className={status === "gatos" ? "btnPet Gatos" : "btnPet Caes"}
+        className={status === "gatos" ? "BtnPet Gatos" : "BtnPet Caes"}
         onClick={() =>
           status === "gatos"
             ? generateRandomNumbers(200, 300)

@@ -3,20 +3,31 @@
 }
 
 .BoxGenetator {
+  padding: 3.3rem 2.8rem 3.3rem 2.8rem;
   background: #88d5ed;
-  height: 46.1rem;
-  width: 38rem;
+  /* height: 46.1rem;
+  width: 38rem; */
   border-radius: 12.9rem;
   justify-content: space-around;
 }
 
 .BoxPet {
+  /* height: 39.5rem;
+  width: 33.2rem; */
+  max-width: 300;
+  min-width: 200;
+  min-height: 200;
+  max-height: 400;
+  border-radius: 11.6rem;
+  display: flex;
+  justify-content: center;
+}
+.ImgPet {
   height: 39.5rem;
   width: 33.2rem;
   border-radius: 11.6rem;
 }
-
-.btnPet {
+.BtnPet {
   margin-top: 3.4rem;
   display: flex;
   justify-content: center;
