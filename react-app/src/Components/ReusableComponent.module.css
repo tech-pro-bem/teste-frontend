@@ -1,0 +1,24 @@
+.h1{
+    letter-spacing: 2px;
+    color: pink;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 0 auto;
+    height: 100%;
+}
+.button{
+    background-color: yellow;
+    padding: 4px;
+    margin: 4px;
+    color: black;
+    border-radius: 10px;
+    border: none;
+    height: 50px;
+}
+
+.image{
+    border-radius: 20px;
+}
