@@ -2,7 +2,9 @@ import { getCat, getDog } from "./requests"
 
 export const getDogPic = async() => {
     try {
-        return await getDog()
+        const { data } = await getDog()
+        const url = data.message
+        return url
     } catch (error) {
         return error
     }
@@ -10,7 +12,9 @@ export const getDogPic = async() => {
 
 export const getCatPic = async() => {
     try {
-        return await getCat()
+        const { data } = await getCat()
+        const url = `https://cataas.com${data.url}`
+        return url
     } catch (error) {
         return error
     }
