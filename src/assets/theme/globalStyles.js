@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #F7F9FA;
     font-family: 'Nunito', sans-serif;
   }

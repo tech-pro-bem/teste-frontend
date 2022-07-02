@@ -6,12 +6,14 @@ export const AppFooter = styled.footer`
     justify-content: center;
     align-items: center;
     gap: 1rem 1.5rem;
-    height: 2.5rem;
+    min-height: 2.5rem;
+    padding: 1rem 5%;
     background-color: #263238;
 `
 
 export const FooterInfo = styled.span`
     font-size: 1rem;
+    text-align: center;
     color: #fff;
     
     & + & {
