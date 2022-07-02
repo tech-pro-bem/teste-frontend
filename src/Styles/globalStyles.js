@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: #fafafa;
+        background: #222222;
     }
 
     @media (max-width: 768px) {
