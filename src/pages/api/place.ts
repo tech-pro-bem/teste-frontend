@@ -1,21 +1,20 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 import { generateRandomNumber } from '../../utils/generateRandomNumber'
+import { Animal } from '../../types'
 
 const SERVICES_URLS = {
-  cat: 'https://placekitten.com',
-  dog: 'https://placedog.net'
+  [Animal.Cat]: 'https://placekitten.com',
+  [Animal.Dog]: 'https://placedog.net'
 }
 const MAX_IMAGE_SIDE_SIZE = 1000
-
-type ServiceQuery = keyof typeof SERVICES_URLS
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const type = req.query.service as ServiceQuery
-  const url = SERVICES_URLS[type]
+  const animal = req.query.service as `${Animal}`
+  const url = SERVICES_URLS[animal]
   const width = generateRandomNumber(MAX_IMAGE_SIDE_SIZE)
   const height = generateRandomNumber(MAX_IMAGE_SIDE_SIZE)
 
