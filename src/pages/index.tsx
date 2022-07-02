@@ -1,24 +1,16 @@
 import type { NextPage } from 'next'
-import { useEffect, useState } from 'react'
 
-type Data = {
-  message: string
-}
+import AnimalCard from '../components/AnimalCard'
 
 const Home: NextPage = () => {
-  const [data, setData] = useState<Data | undefined>(undefined)
-
-  useEffect(() => {
-    fetch('/api/hello')
-      .then(res => res.json())
-      .then(data => setData(data))
-  }, [])
-
-  if (!data) {
-    return <span>Loading...</span>
-  }
-
-  return <h1>{data.message}</h1>
+  return (
+    <main>
+      <div className="container">
+        <AnimalCard animal="cat" />
+        <AnimalCard animal="dog" variant="secondary" />
+      </div>
+    </main>
+  )
 }
 
 export default Home
