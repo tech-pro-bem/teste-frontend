@@ -4,8 +4,8 @@ import ReusableComponent from './Components/ReusableComponent';
 function App() {
   return (
     <div className="App">
-      <ReusableComponent url={'http://placekitten.com'} animal={'gatinho'}/>
-      <ReusableComponent url={'https://place.dog'} animal={'cachorro'}/>
+      <ReusableComponent url={'http://placekitten.com'} animal={'Gatinho'}/>
+      <ReusableComponent url={'https://placedog.p.rapidapi.com/300/200'}  animal={'Cachorro'}/>
     </div>
   );
 }
