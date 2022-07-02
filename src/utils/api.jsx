@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export async function getCatImage(catNumber) {
   const response = await axios.get(
-    `http://placekitten.com/200/300?image=${catNumber}`,
+    `https://placekitten.com/200/300?image=${catNumber}`,
     { responseType: 'blob' },
   );
   return URL.createObjectURL(response.data);
