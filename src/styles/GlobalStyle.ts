@@ -9,15 +9,20 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #202020;
+    background-image: linear-gradient(
+      to right,
+      #8EC5FC 0%,
+      #E0C3FC 100%
+    );
     color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   h1 {
     font-weight: 500;
     margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;

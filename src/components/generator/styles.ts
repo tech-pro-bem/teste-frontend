@@ -6,6 +6,18 @@ export const Generator = styled.div`
   width: 100%;
   border-radius: 1rem;
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.19);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.5px);
+  -webkit-backdrop-filter: blur(9.5px);
+  transition: .3s;
+  
+  &:hover {
+    transform: translateY(-.5rem);
+  }
 
   button {
     background-color: ${mainColor};
@@ -18,6 +30,7 @@ export const Generator = styled.div`
     border-radius: .5rem;
     margin-bottom: 1rem;
     cursor: pointer;
+    transition: .3s;
 
     &:hover {
       background-color: ${mainColorLighter};
@@ -25,8 +38,10 @@ export const Generator = styled.div`
   }
 
   img {
-    width: 100%;
-    background-size: cover;
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
     border-radius: 1rem;
     margin-bottom: 1rem;
   }
