@@ -2,7 +2,7 @@ import axios from 'axios';
 import { random } from '../helpers/random';
 
 export async function fetchCats() {
-  const { data } = await axios.get(`http://placekitten.com/300/300?image=${random().catNumber}`, {
+  const { data } = await axios.get(`https://placekitten.com/300/300?image=${random().catNumber}`, {
     responseType: 'blob',
   });
   const animal = URL.createObjectURL(data);
