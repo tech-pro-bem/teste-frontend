@@ -1,3 +1,4 @@
+import Loading from '../Loading/Loading';
 import { ButtonCss } from './style';
 
 type Props = {
@@ -9,7 +10,7 @@ type Props = {
 function Button({ title, onClick, loading }: Props) {
   return (
     <ButtonCss onClick={onClick}>
-      {loading && <span />}
+      {loading && <Loading />}
       {title}
     </ButtonCss>
   );
