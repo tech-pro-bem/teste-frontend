@@ -7,7 +7,6 @@ type URL = {
   cat: string;
   dog: string;
 };
-// https://placedog.p.rapidapi.com/300/
 const ApiUrl: URL = {
   cat: 'http://placekitten.com/200/300',
   dog: 'https://place.dog/400/400',
@@ -45,6 +44,16 @@ function App() {
           title='Gerar Cachorinho'
         />
       </main>
+      <p>
+        Certifique-se de ter a{' '}
+        <a 
+        target="_blanc"
+        
+        href='https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc'>
+          extensão do chrome
+        </a>{' '}
+        instalada, para ver as fotos dos cachoros.
+      </p>
     </Container>
   );
 }
