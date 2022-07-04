@@ -10,7 +10,7 @@ const linkCopyInit = {
 }
 
 function PetCard({title, petType}) {
-  const [link, setLink] = useState("https://google.com/")
+  const [link, setLink] = useState("")
   const [copyLinkStatus, setCopyLinkStatus] = useState(linkCopyInit)
 
   const petPics = {
