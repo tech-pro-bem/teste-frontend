@@ -1,7 +1,7 @@
 import { CgSpinner } from 'react-icons/cg';
 import * as C from './styles';
 
-const PetButton = (props) => {
+const PetButton = ({action, label, loading}) => {
     
     const handleClick = () => {
         alert('Nenhuma ação definida');
@@ -9,10 +9,10 @@ const PetButton = (props) => {
     }
 
     return ( 
-        <C.Button onClick={props.action ?? handleClick} disabled={props.loading}>
+        <C.Button onClick={action ?? handleClick} disabled={loading}>
             <C.ButtonText>
-                { props.label ?? 'Gerar Pet' }
-                { props.loading && <C.SvgIcon><CgSpinner /></C.SvgIcon> }
+                { label ?? 'Gerar Pet' }
+                { loading && <C.SvgIcon><CgSpinner /></C.SvgIcon> }
             </C.ButtonText>
         </C.Button>
      );
