@@ -1,0 +1,1 @@
+export type Pet = 'kitten' | 'dog';
