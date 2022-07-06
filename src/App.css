@@ -1,0 +1,30 @@
+body {
+  background-color: whitesmoke;
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+.App h1 {
+  text-align: center;
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+@media only screen and (min-width: 768px) {
+  .App section {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+}
