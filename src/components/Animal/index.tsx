@@ -8,6 +8,6 @@ interface AnimalProps {
 
 export function Animal({ source, description }: AnimalProps) {
   return (
-    <Image src={!source ? catDog : source} alt={description} />
+    <Image src={source || catDog} alt={description} />
   )
 }
