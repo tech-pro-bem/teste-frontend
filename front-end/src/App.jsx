@@ -1,7 +1,9 @@
+import './App.css'
+
 import { useState, useEffect } from "react"
 import styled from "styled-components"
-
-import './App.css'
+import apiCat from "./services/apiCat";
+import apiDog from "./services/apiDog";
 
 function App() {
 
@@ -11,15 +13,21 @@ function App() {
     const [widthDog, setWidthDog] = useState(300);
     const [heightDog, setHeightDog] = useState(250);
 
-    const [catImg, setCatImg] = useState(`https://placekitten.com/${widthCat}/${heightCat}`);
-    const [dogImg, setDogImg] = useState(`https://place.dog/${widthDog}/${heightDog}`);
+    const [catImg, setCatImg] = useState(`https://placekitten.com/300/250`);
+    const [dogImg, setDogImg] = useState(`https://placedog.net/300/250`);
 
     useEffect(() => {
-        setCatImg(`https://placekitten.com/${widthCat}/${heightCat}`);
+        apiCat.get(`${widthCat}/${heightCat}`, {responseType: 'blob'})
+        .then(res => {
+            setCatImg(URL.createObjectURL(res.data))
+        });
     }, [widthCat || heightCat]);
 
     useEffect(() => {
-        setDogImg(`https://place.dog/${widthDog}/${heightDog}`);
+        apiDog.get(`${widthDog}/${heightDog}`, {responseType: 'blob'})
+        .then(res => {
+            setDogImg(URL.createObjectURL(res.data))
+        });
     }, [widthDog || heightDog]);
     
     function getRandomCat() {
@@ -86,4 +94,6 @@ const Button = styled.button`
 const Images = styled.img`
     margin: 30px 0;
     border-radius: 10px;
+    width: 280px;
+    height: 240px;
 `
