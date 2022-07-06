@@ -1,18 +1,19 @@
 import { ButtonStyle } from "./style";
 
 interface ButtonProps {
-  name: 'cat' | 'dog';
-  onClick: (event: { currentTarget: { name: string } }) => Promise<void>;
+  value: "cat" | "dog";
+  onClick: React.MouseEventHandler<HTMLButtonElement>;
+  children: string;
 }
 
-export function Button({ name, onClick }: ButtonProps) {
+export function Button({ value, children, onClick }: ButtonProps) {
   return (
     <ButtonStyle
+      value={value}
       type="button"
-      name={name}
       onClick={onClick}
     >
-      { name === "cat" ? "Gerar Gatinho" : "Gerar Cachorrinho" }
+      { children }
     </ButtonStyle>
   )
 }

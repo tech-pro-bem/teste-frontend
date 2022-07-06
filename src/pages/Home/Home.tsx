@@ -11,17 +11,17 @@ export function Home() {
   const [animal, setAnimal] = useState<string>('');
   const [type, setType] = useState<string>('');
 
-  async function handleGenerateAnimal(event: { currentTarget: { name: string } }) {
-    const { name } = event.currentTarget;
+  async function handleGenerateAnimal(event: React.MouseEvent<HTMLButtonElement>) {
+    const { value } = event.currentTarget;
 
-    if (name === "cat") {
+    if (value === "cat") {
       const cat = await fetchCats();
       setAnimal(cat);
-    } else if (name === "dog") {
+    } else if (value === "dog") {
       const dog = await fetchDogs();
       setAnimal(dog);
     }
-    setType(name);
+    setType(value);
   }
 
   return (
@@ -32,11 +32,13 @@ export function Home() {
           Pet Generator
         </h1>
         <Button
-          name="cat"
+          value="cat"
+          children="Gerar Gatinho"
           onClick={handleGenerateAnimal}
         />
         <Button
-          name="dog"
+          value="dog"
+          children="Gerar Cachorrinho"
           onClick={handleGenerateAnimal}
         />
       </div>
