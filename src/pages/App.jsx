@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import Animals from '../components/Animals';
 import { AuthContext } from '../providers/auth';
 import { catFetch, dogFetch } from '../services/animalsFetch';
@@ -8,7 +8,7 @@ function App() {
   const { catAndDog, loading,
     setDogImage, setCatImage } = React.useContext(AuthContext);
 
-  useState(() => {
+  useEffect(() => {
     const dogInitialImage = () => {
       dogFetch().then((value) => {
         setDogImage(value);
@@ -23,7 +23,7 @@ function App() {
 
     dogInitialImage();
     catInitialImage();
-  }, []);
+  }, [setCatImage, setDogImage]);
 
   return (
     <S.AllApp>
